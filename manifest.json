@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Chlippy",
+  "description": "Everybodies favourite paperclip helper.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_title": "It looks like you're trying to...",
+    "default_icon": "images/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches":["<all_urls>"],
+      "css": ["css/clippy.css"],
+      "js": ["js/lib/jquery-2.2.0.min.js", "js/clippy.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "images/*"
+  ]
+}
